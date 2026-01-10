@@ -1,14 +1,14 @@
 #include "SensorCache.h"
 
 SensorCache::SensorCache() 
-    : imu(ICM20948_ADDR)
-    , breathRaw(0)
+    : breathRaw(0)
     , expressionRaw(0)
     , pinchRaw(0)
     , accelX(0), accelY(0), accelZ(0)
     , gyroX(0), gyroY(0), gyroZ(0)
     , magX(0), magY(0), magZ(0)
     , temperature(0)
+    , imu(ICM20948_ADDR)
     , imuAvailable(false)
     , lastUpdate(0)
     , updateInterval(10)
@@ -16,9 +16,9 @@ SensorCache::SensorCache()
 }
 
 bool SensorCache::begin() {
-    pinMode(BREATH_PIN, INPUT);
-    pinMode(EXPRESSION_PIN, INPUT);
-    pinMode(PINCH_PIN, INPUT);
+    pinMode(BREATH_PIN, INPUT_PULLUP);
+    pinMode(EXPRESSION_PIN, INPUT_PULLUP);
+    pinMode(PINCH_PIN, INPUT_PULLUP);
     analogReadResolution(12);
     
 

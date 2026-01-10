@@ -44,9 +44,9 @@ public:
     
 private:
 
-    static const uint8_t BREATH_PIN = 14;
+    static const uint8_t BREATH_PIN = 15;
     static const uint8_t EXPRESSION_PIN = 23;
-    static const uint8_t PINCH_PIN = 15;
+    static const uint8_t PINCH_PIN = 16;
     
     static const uint8_t ICM20948_ADDR = 0x68;
     
