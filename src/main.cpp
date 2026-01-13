@@ -12,7 +12,7 @@ add ribs to bosses
 #include "UserSettings.h"
 #include "ButtonHandler.h"
 
-MIDI_CREATE_INSTANCE(HardwareSerial, Serial3, hwMIDI);
+MIDI_CREATE_INSTANCE(HardwareSerial, Serial5, hwMIDI);
 
 SensorCache sensors;
 UserSettings settings;
